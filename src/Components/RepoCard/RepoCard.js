@@ -4,7 +4,7 @@ import './RepoCard.css'
 const RepoCard = () => {
 	return (
 		<div className='repo-card'>
-			Hi
+			<h2>I'm a repo card</h2> 
 		</div>
 	)
 }

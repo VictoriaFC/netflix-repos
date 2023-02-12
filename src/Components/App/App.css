@@ -1,8 +1,12 @@
 .App {
   text-align: center;
-	background: black;
 }
 
 .section-two {
 	display: flex;
+}
+
+.section-left {
+	text-align: left;
+	margin-left: 18%;
 }

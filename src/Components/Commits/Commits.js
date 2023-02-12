@@ -8,7 +8,6 @@ const Commits = ({ repoName }) => {
 
 	const getCommits = async (repoName) => {
 		const repoCommits = await fetchCommits(repoName);
-		console.log('repo commits: ', repoCommits)
 		const refinedRepoCommits = repoCommits.map((repoCommitData, index) => {
 			return {
 				commitTitle: repoCommitData.commit.message,

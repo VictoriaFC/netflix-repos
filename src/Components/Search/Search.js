@@ -1,18 +1,23 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Search.css'
 
-const Search = ({ searchInput, setSearchInput }) => {
+const Search = ({ handleOrgChange }) => {
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		const form = e.currentTarget;
+		const input = form.firstChild;
+
+		handleOrgChange(input.value)
+	}
 
 	return(
 		<div>
-			<form>
+			<form onSubmit={handleSubmit}>
 				<input 
 					type='search'
 					placeholder="Search Organization (i.e. Netflix)"
 				/>
-				<input 
-					type="submit" value="Submit"
-				/>
+				<input type="submit" value="Submit" />
 			</form>
 		</div>
 	)

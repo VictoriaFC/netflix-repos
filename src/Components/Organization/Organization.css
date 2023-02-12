@@ -1,0 +1,12 @@
+.organization-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.org-logo {
+	border-radius: 500px;
+	border: 1px solid black;
+	height: 300px;
+	margin-bottom: 20px;
+}

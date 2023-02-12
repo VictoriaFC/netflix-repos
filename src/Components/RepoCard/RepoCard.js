@@ -2,13 +2,13 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './RepoCard.css'
 
-const RepoCard = ({ repo }) => {
-	const {name, language, description, starCount, forkCount, dateCreated, commitsUrl} = repo;
+const RepoCard = ({ orgName, repo }) => {
+	const {name, language, description, starCount, forkCount, dateCreated} = repo;
 
 	return (
-		<Link to={`/Commits/${repo.name}`}>
+		<Link to={`/${orgName}/Commits/${name}`}>
 			<div className='repo-card'>
-					<h2>{name}</h2> 
+				<h2>{name}</h2> 
 				<p>{language}</p>
 				<p>{description}</p>
 				<p>Star Count: {starCount}</p>

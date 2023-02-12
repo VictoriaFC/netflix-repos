@@ -3,11 +3,11 @@ import { fetchCommits } from '../../apiCalls'
 import CommitCard from '../CommitCard/CommitCard'
 import './Commits.css'
 
-const Commits = ({ repoName }) => {
+const Commits = ({ orgName, repoName }) => {
 	const [commits, setCommits] = useState([])
 
-	const getCommits = async (repoName) => {
-		const repoCommits = await fetchCommits(repoName);
+	const getCommits = async (orgName, repoName) => {
+		const repoCommits = await fetchCommits(orgName, repoName);
 		const refinedRepoCommits = repoCommits.map((repoCommitData, index) => {
 			return {
 				commitTitle: repoCommitData.commit.message,
@@ -22,7 +22,7 @@ const Commits = ({ repoName }) => {
 	}
 
 	useEffect(() => {
-		getCommits(repoName);
+		getCommits(orgName, repoName);
 	}, [])
 
 	const commitCards = commits.map((commit, index) => <CommitCard key={index} commit={commit}/>)

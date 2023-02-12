@@ -3,8 +3,7 @@ import RepoCard from '../RepoCard/RepoCard'
 import { fetchRepos } from '../../apiCalls'
 import './Repos.css'
 
-const Repos = () => {
-	const [repos, setRepos] = useState([]);
+const Repos = ({ repos, setRepos }) => {
 
 	const getRepos = async () => {
 		const reposData = await fetchRepos();

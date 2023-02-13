@@ -12,6 +12,7 @@ const Commits = ({ orgName, repoName }) => {
 			return {
 				commitTitle: repoCommitData.commit.message,
 				committerUsername: repoCommitData.author?.login || repoCommitData.commit.author?.email,
+				committerAvatar: repoCommitData.author?.avatar_url,
 				commitHash: repoCommitData.sha, 
 				commitUrl: repoCommitData.html_url,
 				commitDateCreated: new Date(Date.parse(repoCommitData.commit.author.date)),
@@ -28,7 +29,7 @@ const Commits = ({ orgName, repoName }) => {
 	const commitCards = commits.map((commit, index) => <CommitCard key={index} commit={commit}/>)
 
 	return (
-		<div>
+		<div className='commits-container'>
 			{commitCards}
 		</div>
 	)

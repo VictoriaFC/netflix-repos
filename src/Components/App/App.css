@@ -1,12 +1,32 @@
 .App {
   text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
-.section-two {
+.body-container-wrapper {
 	display: flex;
+	justify-content: center;
+}
+
+.body-container {
+	display: flex;
+	justify-content: space-between;
+	width: 83%;
 }
 
 .section-left {
 	text-align: left;
-	margin-left: 18%;
+	display: flex;
+	width: 30%;
+}
+
+.section-right {
+	width: 70%;
+}
+
+.commits-container-wrapper {
+	display: flex;
+	justify-content: center;
 }

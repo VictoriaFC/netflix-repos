@@ -48,16 +48,19 @@ const App = () => {
   return (
 		<div className="App">
 			<Route exact path="/">
-				<div className='section-one'>
+				<div className='header-container'>
 					<Header />
 				</div>
-				<div className='section-two'>
-					<div className='section-left'>
-						<Organization org={org}/>
-					</div>
-					<div className='section-right'>
-						<Search handleOrgChange={handleOrgChange}/>
-						<Repos orgName={org.orgName} repos={repos}/>
+
+				<div className='body-container-wrapper'>
+					<div className='body-container'>
+						<div className='section-left'>
+							<Organization org={org}/>
+						</div>
+						<div className='section-right'>
+							<Search handleOrgChange={handleOrgChange}/>
+							<Repos orgName={org.orgName} repos={repos}/>
+						</div>
 					</div>
 				</div>
 			</Route>
@@ -65,9 +68,17 @@ const App = () => {
 			<Route exact path="/:orgName/Commits/:repoName"
 				render={({ match }) => {
 					const { orgName, repoName } = match.params;
-					return <Commits orgName={orgName} repoName={repoName}/>
+					return <div className='commits-page-container'>
+						<div className='header-container'>
+							<Header />
+						</div>
+						<div className='commits-container-wrapper'>
+							<Commits orgName={orgName} repoName={repoName}/>
+						</div>
+					</div>
 				}}
 			/>
+
     </div>
   );
 }

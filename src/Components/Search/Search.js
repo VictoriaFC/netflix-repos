@@ -18,7 +18,7 @@ const Search = ({ handleOrgChange }) => {
 					type='search'
 					placeholder="Find an organization..."
 				/>
-				<input className='submit-button' type="submit" value="Search" />
+				<input className='search-button' type="submit" value="Search" />
 			</form>
 		</div>
 	)

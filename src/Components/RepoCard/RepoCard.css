@@ -1,23 +1,35 @@
 .repo-card {
 	color: #8b949e;
 	display: flex;
+	flex-direction: column;
 	text-align: left;
   box-sizing: border-box;
 	padding-top: 20px;
 	padding-bottom: 20px;
-	border-top: 1px solid #7a828e;
+	width: 100%;
+}
+
+.top-section {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.bottom-section {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	border-bottom: 1px solid #7a828e;
+	padding-bottom: 10px;
 }
 
 .left-side {
-	width: 80%;
-	padding-right: 2%;
-	/* border: 1px solid pink; */
+	width: 70%;
 }
 
 .right-side {
 	width: 20%;
 	font-size: small;
-	/* border: 1px solid pink; */
 }
 
 .repo-card-name:hover {
@@ -57,4 +69,18 @@
 	border: 1px solid black;
 	border-radius: 10px;
 	padding: 5px;
+}
+
+.repositories-button {
+	padding: 10px;
+	border: .5px solid black;
+	border-radius: 5px;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.repositories-button:hover {
+	background-color: #c5c6c8;
+  /* box-shadow: 0 5px #666; */
+  transform: translateY(2px) !important;
 }

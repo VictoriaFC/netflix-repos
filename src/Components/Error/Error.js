@@ -1,6 +1,6 @@
 import React from 'react'
 import './Error.css'
-import errorImage from '/Users/victoriafox-collis/turing/frontend/mod5/netflix-repos/src/assets/Hmmm....png'
+import errorImage from '../../assets/Hmmm.png'
 
 const Error = () => {
 	return (

@@ -11,13 +11,14 @@ const Search = ({ handleOrgChange }) => {
 	}
 
 	return(
-		<div>
+		<div className='search-container'>
 			<form onSubmit={handleSubmit}>
-				<input 
+				<input
+					className='search-bar' 
 					type='search'
-					placeholder="Search Organization (i.e. Netflix)"
+					placeholder="Find an organization..."
 				/>
-				<input type="submit" value="Submit" />
+				<input className='search-button' type="submit" value="Search" />
 			</form>
 		</div>
 	)

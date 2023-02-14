@@ -1,0 +1,7 @@
+.commits-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+	grid-template-rows: auto;
+	grid-gap: 20px;
+	width: 80%;
+}

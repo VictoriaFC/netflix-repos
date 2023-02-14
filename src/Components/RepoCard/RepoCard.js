@@ -6,16 +6,30 @@ const RepoCard = ({ orgName, repo }) => {
 	const {name, language, description, starCount, forkCount, dateCreated} = repo;
 
 	return (
-		<Link to={`/${orgName}/Commits/${name}`}>
 			<div className='repo-card'>
-				<h2>{name}</h2> 
-				<p>{language}</p>
-				<p>{description}</p>
-				<p>Star Count: {starCount}</p>
-				<p>Fork Count: {forkCount}</p>
-				<p>Date Created: {(dateCreated).toDateString()}</p>
+				<div className='top-section'>
+					<div className='left-side'>
+						<Link to={`/${orgName}/Commits/${name}`} style={{ textDecoration: 'none' }} target="_blank">
+							<h2 className='repo-card-name'>{name}</h2> 
+						</Link>
+						<p className='repo-card-description'>{description}</p>
+						<div className='repo-card-info'>
+							<p className='language'>{language}</p>
+							<p>Created: {(dateCreated).toDateString()}</p>
+						</div>
+					</div>
+					<div className='right-side'>
+						<p className='star-count'>⭐️ Star Count:<br></br> {starCount}</p>
+						<p className='fork-count'>🍴 Fork Count:<br></br> {forkCount}</p>
+					</div>
+				</div>
+				<div className='bottom-section'>
+					<Link to={`/${orgName}/Commits/${name}`} style={{ textDecoration: 'none' }} target="_blank">
+						<button className='repositories-button'>View Repository Commits</button>
+					</Link>
+				</div>
 			</div>
-		</Link>
+
 	)
 }
 

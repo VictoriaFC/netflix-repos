@@ -6,6 +6,7 @@ import Commits from '../Commits/Commits'
 import Search from '../Search/Search'
 import Organization from '../Organization/Organization'
 import Header from '../Header/Header'
+import Error from '../Error/Error'
 import './App.css';
 
 const App = () => {
@@ -52,30 +53,29 @@ const App = () => {
   return (
 		<div className="App">
 			<Route exact path="/">
-				<div className='header-container'>
 					<Header />
-				</div>
-
-				<div className='body-container-wrapper'>
-					<div className='body-container'> 
-						<div className='section-left'>
-						{!error && <Organization org={org}/>}
+					<Search handleOrgChange={handleOrgChange}/>
+					{error ? <Error /> :
+						<div className='body-container-wrapper'>
+							<div className='body-container'> 
+								<div className='section-left'>
+									<Organization org={org}/>
+									</div>
+								<div className='section-right'>
+									<Repos orgName={org.orgName} repos={repos}/>
+								</div>
+							</div>
 						</div>
-						<div className='section-right'>
-							<Search handleOrgChange={handleOrgChange}/>
-							{error ? <div>{error}</div> : <Repos orgName={org.orgName} repos={repos}/>}
-						</div>
-					</div>
-				</div>
+					}
+						{/* {!error && <div className='section-left'><Organization org={org}/></div>} */}
+							{/* {error ? <Error /> : <Repos orgName={org.orgName} repos={repos}/>} */}
 			</Route>
 
 			<Route exact path="/:orgName/Commits/:repoName"
 				render={({ match }) => {
 					const { orgName, repoName } = match.params;
 					return <div className='commits-page-container'>
-						<div className='header-container'>
 							<Header />
-						</div>
 						<div className='commits-container-wrapper'>
 							<Commits orgName={orgName} repoName={repoName}/>
 						</div>

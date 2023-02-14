@@ -9,7 +9,7 @@ const RepoCard = ({ orgName, repo }) => {
 			<div className='repo-card'>
 				<div className='top-section'>
 					<div className='left-side'>
-						<Link to={`/${orgName}/Commits/${name}`} style={{ textDecoration: 'none' }} target="_blank">
+						<Link to={`/${orgName}/Commits/${name}`} rel="noopener noreferrer nofollow" style={{ textDecoration: 'none' }} target="_blank">
 							<h2 className='repo-card-name'>{name}</h2> 
 						</Link>
 						<p className='repo-card-description'>{description}</p>
@@ -24,7 +24,7 @@ const RepoCard = ({ orgName, repo }) => {
 					</div>
 				</div>
 				<div className='bottom-section'>
-					<Link to={`/${orgName}/Commits/${name}`} style={{ textDecoration: 'none' }} target="_blank">
+					<Link to={`/${orgName}/Commits/${name}`} rel="noopener noreferrer nofollow" style={{ textDecoration: 'none' }} target="_blank">
 						<button className='repositories-button'>View Repository Commits</button>
 					</Link>
 				</div>

@@ -60,7 +60,7 @@ const App = () => {
 						<div className='body-container-wrapper'>
 							<div className='body-container'> 
 								<div className='section-left'>
-									<Organization org={org}/>
+									{!!org.logo && <Organization org={org}/>}
 									</div>
 								<div className='section-right'>
 									<Repos orgName={org.orgName} repos={repos}/>
@@ -68,8 +68,6 @@ const App = () => {
 							</div>
 						</div>
 					}
-						{/* {!error && <div className='section-left'><Organization org={org}/></div>} */}
-							{/* {error ? <Error /> : <Repos orgName={org.orgName} repos={repos}/>} */}
 			</Route>
 
 			<Route exact path="/:orgName/Commits/:repoName"

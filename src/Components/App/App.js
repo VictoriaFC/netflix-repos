@@ -15,6 +15,7 @@ const App = () => {
 	const [error, setError] = useState(null);
 
 	const handleOrgChange = async (orgName) => {
+		setError(null)
 		const reposData = await fetchRepos(orgName, setError);
 		if(!reposData) {
 			return

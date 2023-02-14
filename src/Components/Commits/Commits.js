@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { fetchCommits } from '../../apiCalls'
 import CommitCard from '../CommitCard/CommitCard'
+import Error from '../Error/Error'
 import './Commits.css'
 
 const Commits = ({ orgName, repoName }) => {
@@ -34,7 +35,8 @@ const Commits = ({ orgName, repoName }) => {
 
 	return (
 		<div className='commits-container'>
-			{error ? <div>{error}</div> : commitCards}
+			{/* {commitCards} */}
+			{error ? <Error /> : commitCards}
 		</div>
 	)
 }

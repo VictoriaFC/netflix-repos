@@ -17,7 +17,7 @@ const CommitCard = ({commit}) => {
 			</div>
 			
 			<div className='commit-card-right'>
-				<button onClick={commitUrl} className='github-button' target="_blank">View it on Github</button>
+				<a href={commitUrl} className='github-button' target="_blank">View it on Github</a>
 			</div>
 
 		</div>

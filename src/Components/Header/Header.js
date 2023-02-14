@@ -1,5 +1,5 @@
 import React from 'react'
-import repoHubLogo from '/Users/victoriafox-collis/turing/frontend/mod5/netflix-repos/src/assets/RepoHub1.png'
+import repoHubLogo from '../../assets/RepoHub1.png'
 import { Link } from 'react-router-dom'
 
 import './Header.css'

@@ -11,9 +11,13 @@ import './App.css';
 const App = () => {
 	const [repos, setRepos] = useState([]);
 	const [org, setOrg] = useState({orgName: null, logo: null });
+	const [error, setError] = useState(null);
 
 	const handleOrgChange = async (orgName) => {
-		const reposData = await fetchRepos(orgName);
+		const reposData = await fetchRepos(orgName, setError);
+		if(!reposData) {
+			return
+		}
 		const firstRepo = reposData[0]
 		const refinedReposData = reposData.map((repoData, index) => {
 			return {
@@ -53,13 +57,13 @@ const App = () => {
 				</div>
 
 				<div className='body-container-wrapper'>
-					<div className='body-container'>
+					<div className='body-container'> 
 						<div className='section-left'>
-							<Organization org={org}/>
+						{!error && <Organization org={org}/>}
 						</div>
 						<div className='section-right'>
 							<Search handleOrgChange={handleOrgChange}/>
-							<Repos orgName={org.orgName} repos={repos}/>
+							{error ? <div>{error}</div> : <Repos orgName={org.orgName} repos={repos}/>}
 						</div>
 					</div>
 				</div>

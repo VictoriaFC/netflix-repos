@@ -10,7 +10,6 @@ An app where you can find an organizations Github repositories! (I.e. Netflix, G
 - Javascript
 - HTML
 - CSS
-- Cypress.io
 
 ## Preview
 ![Screen Shot 2023-02-14 at 5 42 12 PM](https://user-images.githubusercontent.com/98445902/218895739-462c5be0-5c3f-4fbd-8a4f-cc58853320b9.png)
@@ -31,7 +30,7 @@ An app where you can find an organizations Github repositories! (I.e. Netflix, G
 
 ## User Stories
 
-- As a user I should be able to search a company name and see a list of their GitHub repositoties. 
+- As a user I should be able to search an organizations name and see a list of their GitHub repositoties. 
 
 - As a user I should be able to click on a repository link and then see a list of commits for that repo. 
 

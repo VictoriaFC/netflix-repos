@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { fetchCommits } from '../../apiCalls'
 import CommitCard from '../CommitCard/CommitCard'
 import Error from '../Error/Error'
+import { Link } from 'react-router-dom'
 import './Commits.css'
 
 const Commits = ({ orgName, repoName }) => {
@@ -35,7 +36,9 @@ const Commits = ({ orgName, repoName }) => {
 
 	return (
 		<div className='commits-container'>
-			{/* {commitCards} */}
+			<div className='go-back-link-container'>
+				<Link to='/' className='go-back-link'>Go Back</Link>
+			</div>
 			{error ? <Error /> : commitCards}
 		</div>
 	)

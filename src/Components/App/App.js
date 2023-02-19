@@ -54,8 +54,12 @@ const App = () => {
   return (
 		<div className="App">
 			<Route exact path="/">
+				<div className='header-wrapper'>
 					<Header />
+				</div>
+				<div className='search-wrapper'>
 					<Search handleOrgChange={handleOrgChange}/>
+				</div>
 					{error ? <Error /> :
 						<div className='body-container-wrapper'>
 							<div className='body-container'> 

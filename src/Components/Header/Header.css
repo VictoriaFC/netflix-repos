@@ -6,3 +6,15 @@
 .repohub-logo {
 	height: 60px;
 }
+
+@media screen and (max-width: 548px) {
+	.header-container {
+		padding-bottom: 20px;
+		background-color: #f0f3f6;
+		width: 100%;
+	}
+	
+	.repohub-logo {
+		height: 40px;
+	}
+}

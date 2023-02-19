@@ -1,32 +1,66 @@
-.App {
-  text-align: center;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
+@media screen and (min-width: 1300px) {
+	.App {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.body-container-wrapper {
+		display: flex;
+		justify-content: center;
+	}
+	
+	.body-container {
+		display: flex;
+		justify-content: space-between;
+		width: 83%;
+	}
+	
+	.section-left {
+		text-align: left;
+		display: flex;
+		width: 30%;
+	}
+	
+	.section-right {
+		width: 70%;
+	}
+	
+	.commits-container-wrapper {
+		display: flex;
+		justify-content: center;
+	}
 }
 
-.body-container-wrapper {
-	display: flex;
-	justify-content: center;
-}
+@media screen and (max-width: 1299px) {
+	.App {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
 
-.body-container {
-	display: flex;
-	justify-content: space-between;
-	width: 83%;
-}
+	.header-wrapper,
+	.search-wrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
 
-.section-left {
-	text-align: left;
-	display: flex;
-	width: 30%;
-}
+	.body-container-wrapper {
+		display: flex;
+		justify-content: center;
+	}
 
-.section-right {
-	width: 70%;
-}
+	.body-container {
+		display: flex;
+		flex-direction: column;
+		padding: 60px;
+	}
 
-.commits-container-wrapper {
-	display: flex;
-	justify-content: center;
+	.commits-container-wrapper {
+		display: flex;
+		justify-content: center;
+	}
 }
